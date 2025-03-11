@@ -3,7 +3,7 @@
 ## 1. 🔧 Installation of SQLMap
 
 ### 📷 Screenshot:
-![Installation: ](screenshots/database_detection.png)
+![Installation:](https://github.com/shinchan-op/SQLmap_basic_guide/blob/main/screenshots/installation.png)
 
 
 Run the following command to install SQLMap on your Linux system:
@@ -17,7 +17,7 @@ sudo apt update && sudo apt install sqlmap -y
 ## 2. 🛡️ Database Detection
 
 ### 📷 Screenshot:
-![Database Detection](screenshots/database_detection.png)
+![Database Detection](https://github.com/shinchan-op/SQLmap_basic_guide/blob/main/screenshots/Database%20detection.png)
 
 
 To detect databases on a vulnerable website, use the command:
@@ -32,7 +32,7 @@ sqlmap -u "http://testphp.vulnweb.com/listproducts.php?cat=1" --dbs
 
 
 ### 📷 Screenshot:
-![Database Detection Output](screenshots/database_detection.png)
+![Database Detection Output](https://github.com/shinchan-op/SQLmap_basic_guide/blob/main/screenshots/Database%20output.png)
 
 ### ✅ Output:
 ```
@@ -45,7 +45,7 @@ Databases:
 ## 3. 📊 Tables Detection
 
 ### 📷 Screenshot:
-![Tables Detection](screenshots/tables_detection.png)
+![Tables Detection](https://github.com/shinchan-op/SQLmap_basic_guide/blob/main/screenshots/Table%20detection.png)
 
 To list tables within the discovered `acuart` database, run:
 
@@ -58,7 +58,7 @@ sqlmap -u "http://testphp.vulnweb.com/listproducts.php?cat=1" -D acuart --tables
 - `--tables`: Lists all tables within the `acuart` database.
 
 ### 📷 Screenshot:
-![Tables Detection Output](screenshots/tables_detection.png)
+![Tables Detection Output](https://github.com/shinchan-op/SQLmap_basic_guide/blob/main/screenshots/Table%20output.png)
 
 ### ✅ Output:
 ```
@@ -83,7 +83,7 @@ Database: acuart
 ## 4. 📑 Columns Detection
 
 ### 📷 Screenshot:
-![Columns Detection](screenshots/columns_detection.png)
+![Columns Detection](https://github.com/shinchan-op/SQLmap_basic_guide/blob/main/screenshots/Column%20detection.png)
 
 To enumerate columns within the `users` table:
 
@@ -97,7 +97,7 @@ sqlmap -u "http://testphp.vulnweb.com/listproducts.php?cat=1" -D acuart -T users
 - `--columns`: Lists columns in the `users` table.
 
 ### 📷 Screenshot:
-![Columns Detection](screenshots/columns_detection.png)
+![Columns Detection](https://github.com/shinchan-op/SQLmap_basic_guide/blob/main/screenshots/Column%20output.png)
 
 ### ✅ Output:
 ```
@@ -116,7 +116,7 @@ sqlmap -u "http://testphp.vulnweb.com/listproducts.php?cat=1" -D acuart -T users
 ## 5. 🔑 Collecting Credentials
 
 ### 📷 Screenshot:
-![Credentials Collection](screenshots/credentials_collection.png)
+![Credentials Collection](https://github.com/shinchan-op/SQLmap_basic_guide/blob/main/screenshots/Dump%20usernma%20and%20passw.png)
 
 To dump specific columns like `uname` and `pass` from the `users` table:
 
@@ -130,7 +130,7 @@ sqlmap -u "http://testphp.vulnweb.com/listproducts.php?cat=1" -D acuart -T users
 - `--dump`: Extract and display data.
 
 ### 📷 Screenshot:
-![Credentials Collection Output](screenshots/credentials_collection.png)
+![Credentials Collection Output](https://github.com/shinchan-op/SQLmap_basic_guide/blob/main/screenshots/Got%20%20credentials.png)
 
 ### ✅ Sample Output:
 ```
@@ -147,6 +147,6 @@ sqlmap -u "http://testphp.vulnweb.com/listproducts.php?cat=1" -D acuart -T users
 
 ## ⚠️ Disclaimer
 
-> Unauthorized testing or exploiting websites without explicit permission is illegal and unethical. Always ensure you have proper authorization before using SQLMap or similar tools.
+> We have used vulnweb.com (a publicly available web application for security testing) as the target for demonstrating SQLMap commands and testing purposes only.
 
 
